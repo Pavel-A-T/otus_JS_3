@@ -12,12 +12,12 @@
  */
 
 export function useUser() {
-    const user = {name: 'John'};
-    const number = prompt('Введите возраст');
-    user.age = number;
-    const admin = { ...user, role: 'admin'};
-    const {name, age, role} = admin;
-    console.log(name, age, role);
+  const user = { name: "John" };
+  const number = prompt("Введите возраст");
+  user.age = number;
+  const admin = { ...user, role: "admin" };
+  const { name, age, role } = admin;
+  console.log(name, age, role);
 }
 
 /**
@@ -33,39 +33,24 @@ export function useUser() {
  */
 
 export function workWithArray() {
-    const array = [1, 2, 5, 58, 63, 21, 78, 94, 77, 3];
-    let sum = 0;
-    for (let i = 0; i < array.length; i += 1) {
-        sum += array[i];
-    }
-    console.log(sum);
+  const array = [1, 2, 5, 58, 63, 21, 78, 94, 77, 3];
+  let sum = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    sum += array[i];
+  }
+  console.log(sum);
 
-    const ar = array.concat();
-    for (let i = 0; i < ar.length; i += 1) {
-        ar[i] *= 2;
-    }
-    console.log(ar);
-    console.log(array);
+  const ar = array.concat();
+  for (let i = 0; i < ar.length; i += 1) {
+    ar[i] *= 2;
+  }
+  console.log(ar);
+  console.log(array);
 }
 
 export function maxMin(array) {
-    let min;
-    let max;
-    for (let i = 0; i < array.length; i += 1) {
-        if (min === undefined) {
-            min = array[i];
-        }
-        if (max === undefined) {
-            max = array[i];
-        }
-        if (max < array[i]) {
-            max = array[i];
-        }
-        if (min > array[i]) {
-            min = array[i];
-        }
-    }
-    console.log(`min = ${min}, max = ${max}`)
+  const arr = array.sort((a, b) => a - b);
+  console.log(`min = ${  arr.shift()  }, max = ${  arr.pop()}`);
 }
 
 /**
@@ -81,31 +66,30 @@ export function maxMin(array) {
  */
 
 export function diff(a, b) {
-    if (a > b) {
-        return a - b;
-    }
-    return b - a;
+  if (a > b) {
+    return a - b;
+  }
+  return b - a;
 }
 
 export function pow(a, x) {
-    let result = 1;
-    if (x > 0) {
-        for (let i = 0; i < x; i += 1) {
-            result *= a;
-
-        }
-    } else if (x < 0) {
-        for (let i = 0; i < -x; i += 1) {
-            result /= a;
-        }
+  let result = 1;
+  if (x > 0) {
+    for (let i = 0; i < x; i += 1) {
+      result *= a;
     }
-    return result;
+  } else if (x < 0) {
+    for (let i = 0; i < -x; i += 1) {
+      result /= a;
+    }
+  }
+  return result;
 }
 
 export function isWord(str) {
-    if (str.length === 0) {
-        return false;
-    }
-    const s = str.trim();
-    return s.indexOf(" ", 1) === -1;
+  if (str.length === 0) {
+    return false;
+  }
+  const s = str.trim();
+  return s.indexOf(" ", 1) === -1;
 }

@@ -1,5 +1,5 @@
 {
-  "name": "otus_JS_3",
+  "name": "otus_js_3",
   "version": "1.0.0",
   "description": "DZ for begginers",
   "main": "index.js",
@@ -42,6 +42,6 @@
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
-    "*.{css,md,yml,html}": "prettier --write"
+    "*.{css,md,yml,html,js}": "prettier --write"
   }
 }

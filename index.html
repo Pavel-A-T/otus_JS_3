@@ -8,6 +8,9 @@
   <body>
     <div id="app"></div>
 
-    <script src="./src/dom.js"></script>
+    <script type="module">
+      import { addForm } from "./src/addForm.js";
+      addForm(document.querySelector("#app"));
+    </script>
   </body>
 </html>

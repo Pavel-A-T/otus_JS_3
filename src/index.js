@@ -13,26 +13,25 @@
  */
 
 export function calculate(a, b) {
-    console.log(`${a} + ${b} = ${  a + b}`);
-    console.log(`${a} * ${b} = ${  a * b}`);
+  console.log(a + b);
+  console.log(a * b);
 }
 
 export function sumLengthString(a, b) {
-    if (typeof a === "string" && typeof b === "string") {
-        console.log(a.length + b.length);
-    }
+  if (typeof a === "string" && typeof b === "string") {
+    console.log(a.length + b.length);
+  }
 }
 
 export function three() {
-    let number = prompt('Введите трехзначное число', 100);
-    let result = 0;
-    while (number > 0) {
-        result += number % 10;
-        number = (number - number % 10) / 10;
-    }
-    console.log(result);
+  let number = prompt("Введите трехзначное число", 100);
+  let result = 0;
+  while (number > 0) {
+    result += number % 10;
+    number = (number - (number % 10)) / 10;
+  }
+  console.log(result);
 }
-
 
 /**
  1.В переменных a и b хранятся числа. Вывести в
@@ -45,74 +44,74 @@ export function three() {
  которая определяет, поместится ли круг в квадрат.
  */
 export function printMax(a, b) {
-    if (a > b) {
-        console.log(a);
-        return;
-    }
-    console.log(b);
+  if (a > b) {
+    console.log(a);
+    return;
+  }
+  console.log(b);
 }
 
 export function printMonth() {
-    const month = prompt('Введите число от 1 до 12');
-    switch (`${  month}`) {
-        case '1': {
-            console.log('January');
-            break;
-        }
-        case '2': {
-            console.log('February');
-            break;
-        }
-        case '3':{
-            console.log('March');
-            break;
-        }
-        case '4': {
-            console.log('April');
-            break;
-        }
-        case '5': {
-            console.log('May');
-            break;
-        }
-        case '6': {
-            console.log('June');
-            break;
-        }
-        case '7': {
-            console.log('July');
-            break;
-        }
-        case '8': {
-            console.log('August');
-            break;
-        }
-        case '9': {
-            console.log('September');
-            break;
-        }
-        case '10': {
-            console.log('October');
-            break;
-        }
-        case '11': {
-            console.log('November');
-            break;
-        }
-        case '12': {
-            console.log('December');
-            break;
-        }
-        default: {
-            console.log('Error');
-        }
+  const month = prompt("Введите число от 1 до 12");
+  switch (`${month}`) {
+    case "1": {
+      console.log("January");
+      break;
     }
+    case "2": {
+      console.log("February");
+      break;
+    }
+    case "3": {
+      console.log("March");
+      break;
+    }
+    case "4": {
+      console.log("April");
+      break;
+    }
+    case "5": {
+      console.log("May");
+      break;
+    }
+    case "6": {
+      console.log("June");
+      break;
+    }
+    case "7": {
+      console.log("July");
+      break;
+    }
+    case "8": {
+      console.log("August");
+      break;
+    }
+    case "9": {
+      console.log("September");
+      break;
+    }
+    case "10": {
+      console.log("October");
+      break;
+    }
+    case "11": {
+      console.log("November");
+      break;
+    }
+    case "12": {
+      console.log("December");
+      break;
+    }
+    default: {
+      console.log("Error");
+    }
+  }
 }
 
 export function circleInSquare(circle, square) {
-    const diametr = Math.sqrt(circle/Math.PI) * 2;
-    const side = Math.sqrt(square);
-    return (side >= diametr);
+  const diametr = Math.sqrt(circle / Math.PI) * 2;
+  const side = Math.sqrt(square);
+  return side >= diametr;
 }
 
 /**
@@ -129,30 +128,32 @@ export function circleInSquare(circle, square) {
  */
 
 export function print(a, b) {
-    let result = 0;
-    for (let i = a; i <= b; i += 1) {
-        result += i;
-    }
-    console.log(result);
+  let result = 0;
+  for (let i = a; i <= b; i += 1) {
+    result += i;
+  }
+  console.log(result);
 }
 
 export function multiplication() {
-    const j = 7;
-    for (let i = 1; i < 10; i += 1) {
-        const result = j * i;
-        console.log(`${j} * ${i} = ${result}`);
-    }
+  const j = 7;
+  let str = "";
+  for (let i = 1; i < 10; i += 1) {
+    const result = j * i;
+    str += `${j} * ${i} = ${result}\n`;
+  }
+  console.log(str);
 }
 
 export function average() {
-    let result = 0;
-    let div = 0;
-    const number = prompt('Введите число');
-    for (let i = 1; i <= number; i += 1) {
-        if (i % 2 !== 0) {
-            result += i;
-            div += 1;
-        }
+  let result = 0;
+  let div = 0;
+  const number = prompt("Введите число");
+  for (let i = 1; i <= number; i += 1) {
+    if (i % 2 !== 0) {
+      result += i;
+      div += 1;
     }
-    console.log(result / div);
+  }
+  console.log(result / div);
 }
